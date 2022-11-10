@@ -1,0 +1,1 @@
+GET http://localhost:5000/calcular?masa=1&fuerza=3000&ue=10&ud=20&inclinacion=30
