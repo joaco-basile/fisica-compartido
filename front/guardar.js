@@ -10,12 +10,12 @@ calcularBtn.addEventListener("click", (e) => {
     const coeficienteEstatico =
         document.getElementsByName("coeficiente2")[0].value;
 
-    let url = `http://localhost:5000/calcular?masa=${masa}&fuerza=${fuerza}&ud=${coeficienteDinamico}&ue=${coeficienteEstatico}&inclinacion=${inclinacion}`;
+    let url = `http://localhost:5050/calcular?masa=${masa}&fuerza=${fuerza}&ue=${coeficienteEstatico}&ud=${coeficienteDinamico}&inclinacion=${inclinacion}`;
 
     console.log(url);
 
     p = document.createElement("p");
-
+    console.log(masa, fuerza, inclinacion, coeficienteEstatico);
     fetch(url)
         .then((res) => res.json())
         .then((json) => {
